@@ -4,4 +4,4 @@
 # Le premier nombre de chaque ligne est l'adresse, puis une sequence de nombres
 # indique le contenu de chaque octet a partir de cette adresse.
 
-0	12 34 56 78
+0	4A 19 00 00

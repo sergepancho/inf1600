@@ -150,17 +150,18 @@ IR<17..15>=0//inutilise
 IR<14..13>=0//inutilise
 IR<12..0>=0//inutilise
 
+4A 19 00 00 // encodage en little-endian
+
 b)
 RTN concret;
 -recherche d'instructions//le prof a dit qu'il n'etait pas necessaire de faire la lecture d'instruction
-
-
 -Execution de l'instruction
 //envoi de l'adresse a la bascule//envoi de ladresse a la memoire 2
 
-T<-R[IR<20..18>] ;
-Y<-Mem2[T];
-R[1]<-Y+T;
+T<-R[IR<20..18>]; // sauvegarde de la valeur du registre dans T
+Y<-Mem2[T]; // lecture de la valeur de la memoire2 a l'adresse T, assignation a Y
+R[1]<-Y+T; // addition fait par ual et ecriture dans le registre a l'adresse r1
+
 c)Liste de valeurs des signaux de controle
 T<-R[IR<20..18>] ;
 nom des signaux        valeurs 
@@ -200,9 +201,9 @@ E                         1
 F                         0
 G                         0
 UAL                       4a
-ecrireEIP                  0
-ecrireT                    0
-ecrireRegistre             1
+ecrireEIP                 0
+ecrireT                   0
+ecrireRegistre            1
 
 
 
