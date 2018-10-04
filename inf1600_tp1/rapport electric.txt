@@ -113,7 +113,7 @@ b) Calculez le taux de lecture moyenne.
 Taux de lecture moyenne ==5400 *(792*624+780*1424*2+760*1680*3+720*1815*4)*512/60
  
 c) Calculez le taux de lecture moyenne effective si le disque dur est connecté 
-avec un bus PCIe de vitesse 4000 Mb/s.  
+avec un bus PCIe de vitesse 4000 Mb/s.  /////////////////////////
  Taux de lecture effective =(Taux de lecture moyenne/5400) *4000=
 d) Changeriez-vous les résultats précédents si l’information sur le nombre de surfaces était disponible ?    
  Non ,
@@ -129,9 +129,11 @@ k:=8;
 a<-(b-a)*k;
 op:=5:
 //vrai
-R[k]<-8;
-SUBMUL(:=op = 5) -> R[a] <- R[b] - R[a]; 
-R[a]<-R[a]*R[k];
+
+
+k:=8;//valeur de la constante
+SUBMUL(:=op = 5) -> R[a] <- (R[b] - R[a])*k 
+
  
 
 
@@ -143,6 +145,7 @@ Exercice 4:
  1)a)
 Ajoutregistre3(:=op=4a)->R[1]<-Mem2[R[3]]+R[3];
 //passons a l'encodage
+
 IR<31..24>=4A//le circuit de controle effectue une addition
 IR<23..21>=1//ce bus envoie le signal 1 pour ecrire dans le registre 1
 IR<20..18>=3//ce bus envoie le signal 3 pour lire dans le registre 3
@@ -163,6 +166,7 @@ Y<-Mem2[T];
 R[1]<-Y+T;
 c)Liste de valeurs des signaux de controle
 T<-R[IR<20..18>] ;
+//sur 32 bits puis diviser sur 8 bits 
 nom des signaux        valeurs 
 A                         0                    
 B                         1
