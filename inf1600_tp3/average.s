@@ -30,7 +30,7 @@ matrix_row_aver_asm:
                         mov (%esi, %edi, 4), %esi   /* inmatdata[c + r * matorder]*/
                         add %esi, (%esp) /*incremente elem avec le resultat precedent*/
 
-                        movl $1, -8(%ebp)  /* incremente c */
+                        add $1, -8(%ebp)  /* incremente c */
                         jmp FOR_TEST_C
                         END_FOR_TEST_C:
 
@@ -40,7 +40,7 @@ matrix_row_aver_asm:
                 mov 12(%ebp), %edx	/*adresse du tableau out*/
                 mov %eax , (%edx, %edi, 4)  /* outmatdata[r] = elem/matorder */
 
-                movl $1, -4(%ebp)  /* incremente r */
+                add $1, -4(%ebp)  /* incremente r */
                 jmp FOR_TEST_R
                 END_FOR_TEST_R:
     
