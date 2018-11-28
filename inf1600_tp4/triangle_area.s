@@ -5,6 +5,6 @@ _ZNK9CTriangle7AreaAsmEv:
         mov %esp, %ebp /* set ebp to current esp */
         
         /* Write your solution here */
-        
+        movl $0,%eax
         leave          /* restore ebp and esp */
         ret            /* return to the caller */

@@ -15,9 +15,9 @@ _ZNK7CCircle12PerimeterAsmEv:
         fmulp /*multiplie st[0] et st[1]*/
         fldpi /*ajout de pi sur la pile*/
         fmulp /* multiplie pi * raduis * raduis */
-        fstp (%eax)
+      
 
         /* Write your solution here */
-        mov (%eax), %eax
+     /*   mov (%eax), %eax*/
         leave          /* restore ebp and esp */
         ret            /* return to the caller */
