@@ -12,6 +12,7 @@ matrix_row_aver_asm:
         movl $0, -8(%ebp) /* initialise c a zero*/
         movl $0, (%esp) /* initialise elem a zero*/
         movl 16(%ebp), %ecx /*transfert la valeur matorder dans ecx*/
+        
                 FOR_TEST_R:
                 cmp %ecx, -4(%ebp) /* il compare r avec matorder */
                 jge END_FOR_TEST_R /* sort de la boucle si r >= matorder*/
