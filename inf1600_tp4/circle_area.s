@@ -5,6 +5,17 @@ _ZNK7CCircle7AreaAsmEv:
         mov %esp, %ebp /* set ebp to current esp */
         
         /* Write your solution here */
-        
-        leave          /* restore ebp and esp */
+        /*
+mov 8(%ebp),%edi
+lea 4(%edi),%eax
+fld (%eax)
+fld (%eax)
+fmulp
+fldpi
+fmulp
+fstp (%eax)*/
+/*mov (%esi),%eax*/
+
+
+        /*leave  */        /* restore ebp and esp */
         ret            /* return to the caller */
