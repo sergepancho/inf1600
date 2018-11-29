@@ -15,6 +15,5 @@ _ZNK7CCircle12PerimeterAsmEv:
         fmulp /*multiplie st[0] et st[1]*/
         fldpi /*ajout de pi sur la pile*/
         fmulp /* multiplie pi * raduis * raduis */
-
         leave          /* restore ebp and esp */
         ret           /* return to the caller */
